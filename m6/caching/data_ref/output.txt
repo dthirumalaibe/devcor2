@@ -8,7 +8,6 @@ DEBUG:cachecontrol.controller:Updating cache with response from "http://njrusmc.
 DEBUG:cachecontrol.controller:Caching due to etag
 INFO:root:Response 200 / OK
 INFO:root:Cache-Control: public, max-age=300
-INFO:root:X-Cache: None
 INFO:root:ETag: "fce931267722b83a8f2d6290b4b015ec"
 INFO:root:Second GET to URL: http://njrusmc.net/jobaid/wlan_pcap.zip
 DEBUG:cachecontrol.controller:Looking up "http://njrusmc.net/jobaid/wlan_pcap.zip" in the cache
@@ -27,7 +26,6 @@ DEBUG:cachecontrol.controller:Updating cache with response from "http://njrusmc.
 DEBUG:cachecontrol.controller:Response header has "no-store"
 INFO:root:Response 200 / OK
 INFO:root:Cache-Control: no-store
-INFO:root:X-Cache: None
 INFO:root:ETag: "9658f493e9d5cff2794472edae1aff51"
 INFO:root:Second GET to URL: http://njrusmc.net/jobaid/lmnop_answers.pdf
 DEBUG:cachecontrol.controller:Looking up "http://njrusmc.net/jobaid/lmnop_answers.pdf" in the cache

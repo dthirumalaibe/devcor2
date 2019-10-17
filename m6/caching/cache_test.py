@@ -25,7 +25,7 @@ def main():
 
     # Specify list of URLs to perform an HTTP GET against
     url_list = [
-        "http://njrusmc.net/jobaid/wlan_pcap.zip",  # Cache-Control: public
+        "http://njrusmc.net/jobaid/wlan_pcap.zip",  # Cache-Control: public (300s)
         "http://njrusmc.net/jobaid/lmnop_answers.pdf",  # Cache-Control: no-store
     ]
 
@@ -43,7 +43,6 @@ def main():
         resp = cached_sess.get(url)
         logger.info("Response %s / %s", resp.status_code, resp.reason)
         logger.info("Cache-Control: %s", resp.headers.get("Cache-Control"))
-        logger.info("X-Cache: %s", resp.headers.get("X-Cache"))
         logger.info("ETag: %s", resp.headers.get("ETag"))
 
         # Slight delay just to show the cache timer countdown
