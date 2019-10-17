@@ -13,7 +13,8 @@ from auth_token import get_token
 
 
 # Limits how many items can be returned in a single GET request
-LIMIT=3
+LIMIT = 3
+
 
 def main():
     """
