@@ -35,13 +35,18 @@ def process_wtwebhook():
     # The text is considered sensitive information, so perform
     # a GET request to retrieve the text containing the account ID
     api_path = "https://api.ciscospark.com/v1"
-    headers = {"Authorization": f"Bearer {bearer_token}"}
+    get_headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {bearer_token}",
+    }
 
     # Issue HTTP GET for the message ID provided by the webhook,
     # and store the text from it. Example text: "globobot acct100"
     # If it fails, just quit early.
     msg_id = request.json["data"]["id"]
-    get_resp = requests.get(f"{api_path}/messages/{msg_id}", headers=headers)
+    get_resp = requests.get(
+        f"{api_path}/messages/{msg_id}", headers=get_headers
+    )
     if not get_resp.ok:
         return "no message"
 
@@ -62,14 +67,13 @@ def process_wtwebhook():
     # balance for the specific query. If it fails, just quit early.
     room_id = request.json["data"]["roomId"]
     body = {"roomId": room_id, "text": response_str}
-    post_resp = requests.post(
-        f"{api_path}/messages", headers=headers, json=body
-    )
-    if not post_resp.ok:
-        return "reply failed"
-
-    # Response isn't processed, say whatever you want :)
-    return "OK"
+    post_headers = {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {bearer_token}",
+    }
+    requests.post(f"{api_path}/messages", headers=post_headers, json=body)
+    return "complete"
 
 
 @app.route("/", methods=["GET", "POST"])
