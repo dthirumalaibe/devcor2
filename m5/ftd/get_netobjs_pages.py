@@ -29,7 +29,7 @@ def main():
     # which may change in the future. Be sure to check the IP address as
     # I suspect this changes frequently. See here for more details:
     # https://developer.cisco.com/firepower/
-    api_path = "https://10.10.20.65/api/fdm/v2"
+    api_path = "https://10.10.20.65/api/fdm/latest"
     token = get_token(api_path)
 
     # To authenticate, we issue a POST request with our username/password

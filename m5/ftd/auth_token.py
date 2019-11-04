@@ -57,7 +57,7 @@ def main():
     """
 
     # Tested using the FTD DevNet sandbox
-    token = get_token("https://10.10.20.65/api/fdm/v2")
+    token = get_token("https://10.10.20.65/api/fdm/latest")
     print(token)
 
 
