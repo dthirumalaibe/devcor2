@@ -20,7 +20,7 @@ def main():
     """
 
     # Identify the server URL and read in JSON data before connecting
-    recv_url = "https://hrecv.njrusmc.net:5000"
+    recv_url = "https://your.domain.com:5000"
     with open("data.json", "r") as handle:
         data = json.load(handle)
 

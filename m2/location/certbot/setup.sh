@@ -15,8 +15,8 @@ certbot --version
 
 # Run certbot non-interatively to achieve SSL certs
 certbot --apache --non-interactive --agree-tos \
-  -m njrusmc@gmail.com \
-  -d hrecv.njrusmc.net
+  -m your@email.com \
+  -d your.domain.com
 
 # Print summary of certificates that we just created
 certbot certificates

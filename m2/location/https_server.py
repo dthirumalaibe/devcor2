@@ -70,6 +70,6 @@ def process_post():
 if __name__ == "__main__":
     # Supply valid certificate and key so flask can run HTTPS. You must
     # use the fullchain.pem and not the cert.pem if using letsencrypt.
-    cert = "/etc/letsencrypt/live/hrecv.njrusmc.net/fullchain.pem"
-    key = "/etc/letsencrypt/live/hrecv.njrusmc.net/privkey.pem"
+    cert = "/etc/letsencrypt/live/your.domain.com/fullchain.pem"
+    key = "/etc/letsencrypt/live/your.domain.com/privkey.pem"
     app.run(host="0.0.0.0", debug=True, ssl_context=(cert, key))

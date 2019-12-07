@@ -24,6 +24,8 @@ def main():
     logger.setLevel(logging.DEBUG)
 
     # Specify list of URLs to perform an HTTP GET against
+    # Author's note: These files don't have "Cache-Control" anymore as I removed
+    # them after the demo. Please replace these URLs with your own!
     url_list = [
         "http://njrusmc.net/jobaid/wlan_pcap.zip",  # Cache-Control: public (300s)
         "http://njrusmc.net/jobaid/lmnop_answers.pdf",  # Cache-Control: no-store
